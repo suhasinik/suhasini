@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+#this is suhasini project not ravi
 gem 'rails-observers'
 gem 'thin'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
