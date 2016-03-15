@@ -1,0 +1,879 @@
+.digg_pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em; }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .flickr_pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
+/* line 1, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/dedeepya/suhasini/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000 url(images/img03.jpg) repeat-x left top;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #837669;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: #649632;
+}
+
+h1 { font-size: 44px; }
+
+h2 { font-size: 26px; }
+
+h3 { }
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 240%;
+	text-align: justify;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+ul, ol { }
+
+blockquote { }
+
+a { color: #000000; }
+
+a:hover { text-decoration: none; }
+
+a img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin: 7px 30px 0 0;
+}
+
+img.right {
+	float: right;
+	margin: 7px 0 0 30px;
+}
+
+hr { display: none; }
+
+.list1 {
+}
+
+.list1 li {
+	float: left;
+	line-height: normal;
+}
+
+.list1 li img {
+	margin: 0 30px 30px 0;
+}
+
+.list1 li.alt img {
+	margin-right: 0;
+}
+
+#wrapper {
+	background: url(images/img06.jpg) repeat-x left bottom;
+}
+
+/* Header */
+
+#header-wrapper {
+	width: 880px;
+	margin: 0 auto;
+	border-left: 10px solid #FFFFFF;
+	border-right: 10px solid #FFFFFF;
+	border-top: 10px solid #FFFFFF;
+}
+
+#header {
+	width: 880px;
+	height: 76px;
+	margin: 0 auto;
+	background: #608F30 url(images/img02.jpg) no-repeat left top;
+}
+
+/* Menu */
+
+#menu {
+	float: left;
+	width: 540px;
+	height: 51px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 25px 0 0 10px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 17px;
+	padding: 5px 12px;
+	text-decoration: none;
+	font: 14px Georgia, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+}
+
+#menu a:hover { text-decoration: underline; }
+
+#menu .current_page_item a {
+	color: #FFFFFF;
+}
+
+/* Search */
+
+#search {
+	float: right;
+	width: 305px;
+	height: 76px;
+}
+
+#search form {
+	float: right;
+	margin: 0;
+	padding: 30px 20px 0 0;
+}
+
+#search fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#search input {
+	float: left;
+	font: 12px Georgia, "Times New Roman", Times, serif;
+	border: none;
+}
+
+#search-text {
+	width: 135px;
+	height: 18px;
+	padding: 3px 0 0 5px;
+	background: #ECF9E4;
+	color: #658453;
+}
+
+#search-submit {
+	height: 21px;
+	margin-left: 12px;
+	color: #39561D;
+}
+
+/* Page */
+
+#page {
+	width: 840px;
+	margin: 0 auto;
+	padding: 30px 20px 0px 20px;
+	background: #FFFFFF;
+	border-left: 10px solid #FFFFFF;
+	border-right: 10px solid #FFFFFF;
+	border-bottom: 10px solid #FFFFFF;
+}
+
+/** LOGO */
+
+#logo {
+	height: 250px;
+	background: url(/assets/img01-1ec9b9a3c2e7955e3e344b7db85256c01ee8958b1df65bb2d83326017582f453.jpg) no-repeat left top;
+}
+
+#logo h1, #logo p {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: normal;
+}
+
+#logo h1 { padding-top: 140px; }
+
+#logo h1 a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+
+#logo p {
+	padding: 165px 0 0 15px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	color: #B6ACA2;
+}
+
+#logo p a {
+	text-decoration: none;
+	color: #B6ACA2;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+/* Content */
+
+#content {
+	float: left;
+	width: 570px;
+}
+
+/* Post */
+
+.post {
+	margin-bottom: 25px;
+}
+
+.post .title {
+	height: 55px;
+	margin-bottom: 3px;
+	padding: 19px 0px 2px 20px;
+	background: url(/assets/img07-50a486c3c53bbc976495405b9e4698375420ed7a2d119d02de24e6b673c5efbf.jpg) no-repeat left top;
+	color: #000000;
+}
+
+.post .date {
+	float: right;
+	margin-top: -60px;
+	padding-right: 40px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #333333;
+}
+
+.post .meta {
+	margin: -40px  0 3px 25px;
+	padding: 2px 30px 2px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+	color: #B6ACA2;
+}
+
+.post .meta a { color: #B6ACA2; }
+
+.post .entry {
+	padding: 25px 20px;
+}
+
+.post .links {
+	margin: 0 250px 0 0;
+	padding: 0 0 0 0px;
+}
+
+.post .links .comments {
+}
+
+.post .links .permalink {
+	padding-left: 17px;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: right;
+	width: 222px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#sidebar li {
+	margin-bottom: 30px;
+	padding: 0 0 20px 0px;
+}
+
+#sidebar li ul {
+	line-height: 200%;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 0 20px;
+}
+
+#sidebar h2 {
+	height: 33px;
+	margin: 0 0 20px 0px;
+	padding: 15px 0 2px 20px;
+	background: url(/assets/img04-08d125098bd3237e738faff878b65dd862565500820d4a3efb7910d34eb3b37f.jpg) no-repeat left top;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+
+#sidebar p {
+	line-height: 200%;
+}
+
+/* Calendar */
+
+#calendar {
+}
+
+#calendar caption {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	border-right: 1px solid #F5F2EF;
+}
+
+#calendar thead th {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #F5F2EF;
+	border-left: 1px solid #F5F2EF;
+	background: #F5F2EF;
+}
+
+#calendar tbody td {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #F5F2EF;
+	border-left: 1px solid #F5F2EF;
+}
+
+#calendar tfoot td {
+	padding: 5px;
+}
+
+#calendar tfoot #next {
+	text-align: right;
+}
+
+#calendar #today {
+	background: #E7F1E1;
+}
+
+/* Footer */
+
+#footer {
+	width: 880px;
+	margin: 0 auto;
+	padding: 0;
+	background: #494336 url(/assets/img05-bcd56fe5900d488792efba1828610da26c37c92e6af0bf60e57ef7e282259372.jpg) no-repeat left top;
+	border-left: 10px solid #FFFFFF; 
+	border-right: 10px solid #FFFFFF;
+	border-bottom: 10px solid #FFFFFF;
+}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	line-height: normal;
+	color: #B5ADA5;
+}
+
+#footer a {
+	color: #B5ADA5;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+/* -------------------------------------------------------------------------------------------------
+
+It's *strongly* suggested that you don't modify this file.  Instead, load a new stylesheet after
+this one in your layouts (eg formtastic_changes.css) and override the styles to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+This stylesheet forms part of the Formtastic Rails Plugin
+(c) 2008-2011 Justin French
+
+--------------------------------------------------------------------------------------------------*/
+
+/* NORMALIZE AND RESET - obviously inspired by Yahoo's reset.css, but scoped to just .formtastic
+--------------------------------------------------------------------------------------------------*/
+
+.formtastic,
+.formtastic ul,
+.formtastic ol,
+.formtastic li,
+.formtastic fieldset,
+.formtastic legend,
+.formtastic input,
+.formtastic button,
+.formtastic textarea,
+.formtastic select,
+.formtastic p {
+  margin:0;
+  padding:0;
+}
+
+.formtastic fieldset {
+  border:0;
+}
+
+.formtastic em,
+.formtastic strong {
+  font-style:normal;
+  font-weight:normal;
+}
+
+.formtastic ol,
+.formtastic ul {
+  list-style:none;
+}
+
+.formtastic abbr,
+.formtastic acronym {
+  border:0;
+  font-variant:normal;
+}
+
+.formtastic input,
+.formtastic button,
+.formtastic textarea {
+  font-family:sans-serif;
+  font-size:inherit;
+  font-weight:inherit;
+}
+
+.formtastic input,
+.formtastic textarea,
+.formtastic select {
+  font-size:100%;
+}
+
+.formtastic legend {
+  white-space:normal;
+  color:#000;
+}
+
+
+/* SEMANTIC ERRORS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .errors {
+  color:#cc0000;
+  margin:0.5em 0 1.5em 25%;
+  list-style:square;
+}
+
+.formtastic .errors li {
+  padding:0;
+  border:none;
+  display:list-item;
+}
+
+
+/* BUTTONS & ACTIONS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .buttons, 
+.formtastic .actions {
+  overflow:hidden; /* clear containing floats */
+  padding-left:25%;
+}
+
+.formtastic .button, 
+.formtastic .action {
+  float:left;
+  padding-right:0.5em;
+}
+
+.formtastic .button_action button {
+  padding:3px 8px;
+}
+
+.formtastic .link_action a {
+  display:block;
+  padding:3px 0;
+}
+
+
+/* INPUTS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .inputs {
+  overflow:hidden; /* clear containing floats */
+}
+
+.formtastic .input {
+  overflow:hidden; /* clear containing floats */
+  padding:0.5em 0; /* padding and negative margin juggling is for Firefox */
+  margin-top:-0.5em;
+  margin-bottom:1em;
+}
+
+
+/* LEFT ALIGNED LABELS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .input .label {
+  display:block;
+  width:25%;
+  float:left;
+  padding-top:.2em;
+}
+
+.formtastic .fragments .label,
+.formtastic .choices .label {
+  position:absolute;
+  width:95%;
+  left:0px;
+}
+
+.formtastic .fragments .label label,
+.formtastic .choices .label label {
+  position:absolute;
+}
+
+/* NESTED FIELDSETS AND LEGENDS (radio, check boxes and date/time inputs use nested fieldsets)
+--------------------------------------------------------------------------------------------------*/
+.formtastic .choices {
+  position:relative;
+}
+
+.formtastic .choices-group {
+  float:left;
+  width:74%;
+  margin:0;
+  padding:0 0 0 25%;
+}
+
+.formtastic .choice {
+  padding:0;
+  border:0;
+}
+
+
+/* INLINE HINTS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .input .inline-hints {
+  color:#666;
+  margin:0.5em 0 0 25%;
+}
+
+
+/* INLINE ERRORS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .inline-errors {
+  color:#cc0000;
+  margin:0.5em 0 0 25%;
+}
+
+.formtastic .errors {
+  color:#cc0000;
+  margin:0.5em 0 0 25%;
+  list-style:square;
+}
+
+.formtastic .errors li {
+  padding:0;
+  border:none;
+  display:list-item;
+}
+
+
+/* STRING, NUMERIC, PASSWORD, EMAIL, URL, PHONE, SEARCH (ETC) OVERRIDES
+--------------------------------------------------------------------------------------------------*/
+.formtastic .stringish input {
+  width:72%;
+}
+
+.formtastic .stringish input[size],
+.formtastic .stringish input[max] {
+  width:auto;
+  max-width:72%;
+}
+
+
+/* TEXTAREA OVERRIDES
+--------------------------------------------------------------------------------------------------*/
+.formtastic .text textarea {
+  width:72%;
+}
+
+.formtastic .text textarea[cols] {
+  width:auto;
+  max-width:72%;
+}
+
+
+/* HIDDEN OVERRIDES
+--------------------------------------------------------------------------------------------------*/
+.formtastic .hidden {
+  display:none;
+}
+
+
+/* BOOLEAN LABELS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .boolean label {
+  padding-left:25%;
+  display:block;
+}
+
+
+/* CHOICE GROUPS
+--------------------------------------------------------------------------------------------------*/
+.formtastic .choices-group {
+  margin-bottom:-0.5em;
+}
+
+.formtastic .choice {
+  margin:0.1em 0 0.5em 0;
+}
+
+.formtastic .choice label {
+  float:none;
+  width:100%;
+  line-height:100%;
+  padding-top:0;
+  margin-bottom:0.6em;
+}
+
+
+/* ADJUSTMENTS FOR INPUTS INSIDE LABELS (boolean input, radio input, check_boxes input)
+--------------------------------------------------------------------------------------------------*/
+.formtastic .choice label input,
+.formtastic .boolean label input {
+  margin:0 0.3em 0 0.1em;
+  line-height:100%;
+}
+
+
+/* FRAGMENTED INPUTS (DATE/TIME/DATETIME)
+--------------------------------------------------------------------------------------------------*/
+.formtastic .fragments {
+  position:relative;
+}
+
+.formtastic .fragments-group {
+  float:left;
+  width:74%;
+  margin:0;
+  padding:0 0 0 25%;
+}
+
+.formtastic .fragment {
+  float:left;
+  width:auto;
+  margin:0 .3em 0 0;
+  padding:0;
+  border:0;
+}
+
+.formtastic .fragment label {
+  display:none;
+}
+
+.formtastic .fragment label input {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+
