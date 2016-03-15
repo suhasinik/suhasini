@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suhasini</title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper"></div>
+<div id="header-wrapper">
+	<!-- header -->
+	<%= render :partial => "homes/header" %>
+	<hr></hr>
+	<!-- end #logo -->
+	<div id="header">
+		<!-- menu -->
+		<%= render :partial => "homes/menu" %>
+
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+</div>
+<!-- end #header-wrapper -->
+
+<div id="page">
+	<!-- content -->
+	<%= render :partial => "homes/content" %>
+	<!-- end #content -->
+	<div id="sidebar">
+		<ul>
+			<!-- sidebar1 -->
+			<%= render :partial => "homes/sidebar1" %>
+			<li id="calendar">
+				<h2>Calendar</h2>
+				<div id="calendar_wrap">
+					<!-- sidebar2 -->
+					<%= render :partial => "homes/sidebar2" %>
+				</div>
+			</li>
+			<!-- sidebar3 -->
+			<%= render :partial => "homes/sidebar3" %>
+					</ul>
+	</div>
+	<!-- end #sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #page -->
+
+<!-- footer -->
+<%= render :partial => "homes/footer" %>
+<!-- end #footer -->
+</div>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+</html>
